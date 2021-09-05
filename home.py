@@ -2,6 +2,11 @@ from flask import Flask
 
 app = Flask(__name__)
 
-app.route("/")
+@app.route("/")
 def home():
-    return "<p>ZeroHedge</p>"
+    print("working")
+    return "<button>Hedge</button>"
+
+@app.route("/about")
+def about():
+    return "blessed"
